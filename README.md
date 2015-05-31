@@ -18,15 +18,17 @@ I have developed my own preferences using Angular, which are -amongst other thin
 * [ui-router](https://github.com/angular-ui/ui-router)'s nested views
 * a clear directory and file structure like so:
 
-   ` app
-    |-component1
-    | |-component1.controller.js
-    | |-component1.html
-    |-component2
-    | |-component2.controller.js
-    | |-component2.html
-    |-app.js
-    |-routes.js`
+```
+app
+ |-component1
+ | |-component1.controller.js
+ | |-component1.html
+ |-component2
+ | |-component2.controller.js
+ | |-component2.html
+ |-app.js
+ |-routes.js
+ ```
 
 Author
 ------
