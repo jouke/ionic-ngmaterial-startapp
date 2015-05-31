@@ -1,0 +1,50 @@
+      <md-sidenav 
+        layout            ="column" 
+        class             ="md-sidenav-left md-whiteframe-z2" 
+        md-component-id   ="left" 
+        >
+        <md-toolbar class="md-hue-2">
+          <div layout="row" class="md-toolbar-tools-bottom inset">
+            <user-avatar></user-avatar>
+            <span flex="5"></span>
+            <div flex="66">
+              <div>Firstname Lastname</div>
+              <div>email@domainname.com</div>
+            </div>
+          </div>
+        </md-toolbar>
+        <md-list>
+          <md-list-item ng-repeat="item in smc.menu">
+            <a>
+              <div 
+                class        ="md-list-item-text" 
+                md-ink-ripple 
+                layout       ="row" 
+                layout-align ="start center">
+                <div class="inset">
+                  <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
+                </div>
+                <div class="inset">{{item.title}}
+                </div>
+              </div>
+            </a>
+          </md-list-item>
+          <md-divider></md-divider>
+          <md-subheader>Management</md-subheader>
+          <md-list-item ng-repeat="item in smc.admin">
+            <a>
+              <div 
+                class        ="md-list-item-text" 
+                md-ink-ripple 
+                layout       ="row" 
+                layout-align ="start center">
+                <div class="inset">
+                  <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
+                </div>
+                <div class="inset">{{item.title}}
+                </div>
+              </div>
+            </a>
+          </md-list-item>
+        </md-list>
+      </md-sidenav>

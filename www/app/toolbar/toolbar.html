@@ -1,0 +1,25 @@
+      <md-toolbar>
+      <br>
+        <div class="md-toolbar-tools">
+          <md-button class="button-small" ng-click="tbc.toggleSidenav('left')" aria-label="Menu">
+            <ng-md-icon icon="menu"></ng-md-icon>
+          </md-button>
+          <span class="md-heading">
+            Dashboard
+          </span>
+          <span flex></span>
+          <md-button class="button-small" aria-label="Open Settings" ng-click="tbc.showListBottomSheet($event)">
+            <ng-md-icon icon="more_vert"></ng-md-icon>
+          </md-button>
+        </div>
+        <div>
+          <md-tabs class="md-primary" md-stretch-tabs="always">
+            <md-tab id="tab1" aria-controls="tab1-content" md-on-select="tbc.go('main.dashboard.recent')">
+              Latest
+            </md-tab>
+            <md-tab id="tab2" aria-controls="tab2-content" md-on-select="tbc.go('main.dashboard.favorites')">
+              Favorites
+            </md-tab>
+          </md-tabs>
+        </div>
+      </md-toolbar>

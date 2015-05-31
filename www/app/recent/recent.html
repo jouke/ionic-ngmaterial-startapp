@@ -1,0 +1,34 @@
+      <md-button class="md-fab md-fab-bottom-right" md-ink-ripple aria-label="Add" ng-click="rc.showAdd($event)">
+        <ng-md-icon icon="add"></ng-md-icon>
+      </md-button>
+
+      <md-content layout="column" class="relative" layout-padding layout-fill role="main">
+        <div class="inset"></div>
+
+          <div role="tabpanel"
+               id="tab1-content"
+               aria-labelledby="tab1"
+               md-swipe-left="next()"
+               md-swipe-right="previous()"
+               layout="column" layout-align="space-around">
+            <div>
+              <h2 class="md-display-1" flex="100">Activity</h2>
+            </div>
+            <md-card  flex-gt-sm="90" flex-gt-md="80" ng-repeat="item in rc.activity | filter:search">
+              <md-card-content>
+                <div layout="row" flex class="md-list-item-text">
+                  <div flex="25" class="md-avatar">
+                      <user-avatar></user-avatar>
+                  </div>
+                  <div flex layout="column" class="md-tile-content">
+                    <h3 class="md-headline">{{item.what}}</h3>
+                    <h4 class="md-subhead">{{item.who}}</h4>
+                    <p class="md-body-1">{{item.when}}</p>
+                  </div>
+                </div>
+              </md-card-content>
+            </md-card>
+          </div>
+
+     </md-content>
+

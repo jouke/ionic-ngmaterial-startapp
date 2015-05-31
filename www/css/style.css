@@ -1,0 +1,26 @@
+.md-button.button-small {
+  min-width: 0px; }
+
+md-content.md-default-theme {
+  background-color: #eee; }
+
+md-toolbar .md-button.md-default-theme {
+  border-radius: 99%; }
+
+.md-toolbar-tools-bottom {
+  font-size: small; }
+  .md-toolbar-tools-bottom :last-child {
+    opacity: 0.8; }
+
+md-toolbar:not(.md-hue-1), .md-fab {
+  fill: #fff; }
+
+ng-md-icon {
+  position: relative;
+  top: 5px; }
+
+.md-button.md-fab.md-fab-bottom-right {
+  position: fixed !important; }
+
+.user-avatar {
+  border-radius: 99%; }

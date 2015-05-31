@@ -1,0 +1,43 @@
+      <md-button class="md-fab md-fab-bottom-right" md-ink-ripple aria-label="Add" ng-click="fc.showAdd($event)">
+        <ng-md-icon icon="add"></ng-md-icon>
+      </md-button>
+
+      <md-content layout="column" class="relative" layout-padding layout-fill role="main">
+        <div class="inset"></div>
+          <div role="tabpanel"
+               id="tab2-content"
+               aria-labelledby="tab2"
+               md-swipe-left="next()"
+               md-swipe-right="previous()" 
+               layout="row" layout-align="center center">
+              <md-card flex-gt-sm="90" flex-gt-md="80">
+                <md-card-content>
+                  <h2 class="md-display-1">Favorites</h2>
+                  <md-list>
+                    <md-list-item ng-repeat="item in fc.activity | filter:search | orderBy:'-what'">
+                      <div class="md-list-item-text">
+                        <div class="md-avatar" hide-sm>
+                            <user-avatar></user-avatar>
+                        </div>
+                        <div class="md-tile-content">
+                          <h3 class="md-headline">{{item.what}}</h3>
+                          <h4 class="md-subhead">{{item.who}}</h4>
+                          <p class="md-body-1">
+                            {{item.notes}}
+                          </p>
+                        </div>
+                      </div>
+                      <md-divider md-inset hide-sm ng-if="!$last"></md-divider>
+                      <md-divider hide-gt-sm ng-if="!$last"></md-divider>
+                    </md-list-item>
+                    <md-divider></md-divider>
+                    <md-list-item layout class="inset">
+                        <md-button layout layout-align="start center" flex class="md-primary">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg> More
+                        </md-button>
+                    </md-list-item>
+                  </md-list>
+                </md-card-content>
+              </md-card>
+          </div>
+     </md-content>
