@@ -34,6 +34,11 @@ Author
 ------
 Jouke Visser <jouke@joukevisser.com>
 
+Credits
+-------
+
+Heavily based on [the work of Kyle Ledbetter](http://codepen.io/kyleledbetter/pen/gbQOaV)
+
 License
 -------
 
